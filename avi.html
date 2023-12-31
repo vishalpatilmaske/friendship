@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lato&family=Lobster&family=Montserrat:wght@500&family=Open+Sans:wght@300&family=Poppins:wght@200&family=Roboto:ital,wght@0,100;0,400;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Friendship</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: "Arial", sans-serif;
+      }
+      .container {
+        position: relative;
+        height: 100vh;
+        background-image: url("a9e82048-219b-468c-9d30-fd4e7da330be.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .heading {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+        transform: translateX(-50%);
+        text-align: center;
+        margin-bottom: 20px;
+        color: rgb(0, 0, 0); /* Set text color */
+        font-family: "Dancing Script";
+        font-size: 1rem;
+      }
+      .data {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgb(0, 0, 0); /* Set text color */
+      }
+      p {
+        font-size: 20px;
+        font-family: "Bitter";
+      }
+
+      /* Media queries for responsiveness */
+      @media (max-width: 768px) {
+        .heading {
+          font-size: 24px;
+        }
+        p {
+          font-size: 18px;
+          font-family: "Bitter";
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading"><h1>Hi Nikita</h1></div>
+      <div class="data">
+        <form id="response-form">
+          <div>
+            <p>
+              <strong>Would you like to make a friendship with me</strong>
+            </p>
+          </div>
+          <div class="buttons">
+            <button
+              type="button"
+              class="btn btn-warning"
+              onclick="getResponse('yes')"
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="getResponse('no')"
+            >
+              No
+            </button>
+          </div>
+        </form>
+        <a
+          href="https://wa.me/9322168109"
+          class="btn btn-success contact-link w-100"
+          id="contactButton"
+          style="display: none"
+        >
+          <b>Contact with me</b>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      function getResponse(response) {
+        if (response === "yes") {
+          document.getElementById("contactButton").style.display = "block";
+        } else {
+          document.getElementById("contactButton").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
